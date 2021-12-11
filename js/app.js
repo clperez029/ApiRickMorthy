@@ -20,7 +20,7 @@ selectedCharacters.addEventListener('change', ()=>{
         .then(res => res.json())
         .then(data => {console.log(data)
             namecharacter.textContent = data.name
-            imgcharacter.setAttribute('src', data.url)
+            imgcharacter.setAttribute('src', data.image)
             speciecharacter.textContent = data.species
             genderCharacter.textContent = data.gender
         })

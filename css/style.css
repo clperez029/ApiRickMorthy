@@ -64,8 +64,9 @@ body{
 
 .card img{
     border: 1px solid #474787;
-    min-height: 200px;
-    width: 80%;
+    min-height: 50px;
+    max-height: auto;
+    width: 50%;
     border-radius: 7px;
 }
 
@@ -77,4 +78,8 @@ body{
     .cont-cards{
         width: 90%;
     }
+
+    .card img{
+    width: 80%;
+}
 }
