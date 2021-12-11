@@ -5,14 +5,18 @@ const speciecharacter = document.getElementById("specieCharacter")
 const genderCharacter = document.getElementById("genderCharacter")
 
 const api_rickandmorthy = 'https://rickandmortyapi.com/api'
-console.log(selectedCharacters)
 
 selectedCharacters.addEventListener('change', ()=>{
-    console.log('cambie!!!')
     let actualcharacter = selectedCharacters.value
-    console.log(actualcharacter)
     if (actualcharacter > 0){
-        fetch (`${api_rickandmorthy}/character/${actualcharacter}`)
+        fetch (`${api_rickandmorthy}/character/${actualcharacter}`,
+        {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        mode: 'cors',
+        cache: 'default'})
         .then(res => res.json())
         .then(data => {console.log(data)
             namecharacter.textContent = data.name
