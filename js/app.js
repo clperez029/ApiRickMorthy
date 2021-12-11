@@ -1,38 +1,24 @@
-
+const selectedCharacters = document.getElementById("selectcharacters")
+const namecharacter = document.getElementById("nomCharacter")
+const imgcharacter = document.getElementById("imgCharacter")
+const speciecharacter = document.getElementById("specieCharacter")
+const genderCharacter = document.getElementById("genderCharacter")
 
 const api_rickandmorthy = 'https://rickandmortyapi.com/api'
+console.log(selectedCharacters)
 
-function getCharacter () {
-    fetch (`${api_rickandmorthy}/character`)
-    .then(res => res.json())
-    .then(data => {
-        let character = data.results;
-        let id;
-        let name;
-        let img;
-        let specie;
-        let gender;
-
-        character.forEach((i) => {
-        id = i.id;
-        name = i.name;
-        img = i.image;
-        specie = i.species;
-        gender = i.gender;
-        
-        let add_card = document.getElementById('cont-cards');
-        add_card.innerHTML += `
-        <div class="card">
-        <h3>${name}</h3>
-        <img src="${img}" alt="${name}">
-        <p class="specie">${specie}</p>
-        <p class="specie">${gender}</p>
-        </div>
-        `
+selectedCharacters.addEventListener('change', ()=>{
+    console.log('cambie!!!')
+    let actualcharacter = selectedCharacters.value
+    console.log(actualcharacter)
+    if (actualcharacter > 0){
+        fetch (`${api_rickandmorthy}/character/${actualcharacter}`)
+        .then(res => res.json())
+        .then(data => {console.log(data)
+            namecharacter.textContent = data.name
+            imgcharacter.setAttribute('src', data.url)
+            speciecharacter.textContent = data.species
+            genderCharacter.textContent = data.gender
         })
-    })
-}
-
-window.onload =getCharacter();
-
-
+    }
+})
