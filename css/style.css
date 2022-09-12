@@ -1,89 +1,88 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 * {
-    padding: 0;
-    margin: 0;
-    font-family: 'Poppins','Montserrat', sans-serif; ; 
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", "Montserrat", sans-serif;
 }
 
-body{
-    width: 100vw;
-    height: 100vh;
-    background-color: #2c2c54;
-    display:flex;
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #2c2c54;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
 }
-.title{
-    color: #fff;
-    padding: 1rem;
-    font-weight: bold;
-    letter-spacing: 3px;
-}
-
-.cont-main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+.title {
+  color: #fff;
+  padding: 1rem;
+  font-weight: bold;
+  letter-spacing: 3px;
 }
 
-.selectcharacters{
-    padding:0.5rem;
-    font-weight: 600;
-    border-radius: 0.5rem;
+.cont-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
-
-.cont-cards{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #474787;
-    width: 50%;
-    margin-top: 2rem;
-    padding: 1rem;
-    border-radius: 0.5rem;
+.selectcharacters {
+  padding: 0.5rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
 }
 
-.card{
-    text-align: center;
-    background-color: aliceblue;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.cont-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #474787;
+  width: 50%;
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.card {
+  text-align: center;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  border-radius: 0.5rem;
+  margin: 1rem 0px;
+  padding: 1rem 0px;
+}
+
+.card img {
+  border: 1px solid #474787;
+  min-height: 50px;
+  max-height: auto;
+  width: 50%;
+  border-radius: 7px;
+  min-height: 300px;
+  background-image: url("../img/bg-RickAndMorthy.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.specie {
+  margin: 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+  .cont-cards {
     width: 90%;
-    border-radius: 0.5rem;
-    margin: 1rem 0px;
-    padding: 1rem 0px;
-}
+  }
 
-.card img{
-    border: 1px solid #474787;
-    min-height: 50px;
-    max-height: auto;
-    width: 50%;
-    border-radius: 7px;
-    min-height: 300px;
-    background-image: url("../img/bg-RickAndMorthy.png");
-    background-size: cover ;
-    background-repeat: no-repeat;
-}
-
-.specie{
-    margin: 0.5rem 0;
-}
-
-@media  (max-width: 768px){
-    .cont-cards{
-        width: 90%;
-    }
-
-    .card img{
+  .card img {
     width: 80%;
-}
+  }
 }
