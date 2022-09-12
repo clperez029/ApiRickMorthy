@@ -6,6 +6,8 @@ const genderCharacter = document.getElementById("genderCharacter")
 
 const api_rickandmorthy = 'https://rickandmortyapi.com/api'
 
+console.log("selectedCharacters ----- > ", selectedCharacters.value);
+
 selectedCharacters.addEventListener('change', ()=>{
     let actualcharacter = selectedCharacters.value
     if (actualcharacter > 0){
